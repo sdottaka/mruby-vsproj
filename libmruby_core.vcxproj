@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_MT|Win32">
+      <Configuration>Debug_MT</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_MT|x64">
+      <Configuration>Debug_MT</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_MT|Win32">
+      <Configuration>Release_MT</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_MT|x64">
+      <Configuration>Release_MT</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\mruby\build\src\y.tab.c" />
+    <ClCompile Include="..\mruby\src\array.c" />
+    <ClCompile Include="..\mruby\src\backtrace.c" />
+    <ClCompile Include="..\mruby\src\class.c" />
+    <ClCompile Include="..\mruby\src\codegen.c" />
+    <ClCompile Include="..\mruby\src\compar.c" />
+    <ClCompile Include="..\mruby\src\crc.c" />
+    <ClCompile Include="..\mruby\src\debug.c" />
+    <ClCompile Include="..\mruby\src\dump.c" />
+    <ClCompile Include="..\mruby\src\enum.c" />
+    <ClCompile Include="..\mruby\src\error.c" />
+    <ClCompile Include="..\mruby\src\etc.c" />
+    <ClCompile Include="..\mruby\src\gc.c" />
+    <ClCompile Include="..\mruby\src\hash.c" />
+    <ClCompile Include="..\mruby\src\init.c" />
+    <ClCompile Include="..\mruby\src\kernel.c" />
+    <ClCompile Include="..\mruby\src\load.c" />
+    <ClCompile Include="..\mruby\src\numeric.c" />
+    <ClCompile Include="..\mruby\src\object.c" />
+    <ClCompile Include="..\mruby\src\pool.c" />
+    <ClCompile Include="..\mruby\src\print.c" />
+    <ClCompile Include="..\mruby\src\proc.c" />
+    <ClCompile Include="..\mruby\src\range.c" />
+    <ClCompile Include="..\mruby\src\state.c" />
+    <ClCompile Include="..\mruby\src\string.c" />
+    <ClCompile Include="..\mruby\src\symbol.c" />
+    <ClCompile Include="..\mruby\src\variable.c" />
+    <ClCompile Include="..\mruby\src\version.c" />
+    <ClCompile Include="..\mruby\src\vm.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\mruby\src\parse.y">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../mruby/build/src/y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">../mruby/build/src/y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../mruby/build/src/y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">../mruby/build/src/y.tab.c</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">mkdir ../mruby/build/src 2&gt; NUL
+call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../mruby/build/src/y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">../mruby/build/src/y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../mruby/build/src/y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">../mruby/build/src/y.tab.c</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\mruby\include\mrbconf.h" />
+    <ClInclude Include="..\mruby\include\mruby.h" />
+    <ClInclude Include="..\mruby\include\mruby\array.h" />
+    <ClInclude Include="..\mruby\include\mruby\boxing_nan.h" />
+    <ClInclude Include="..\mruby\include\mruby\boxing_no.h" />
+    <ClInclude Include="..\mruby\include\mruby\boxing_word.h" />
+    <ClInclude Include="..\mruby\include\mruby\class.h" />
+    <ClInclude Include="..\mruby\include\mruby\compile.h" />
+    <ClInclude Include="..\mruby\include\mruby\data.h" />
+    <ClInclude Include="..\mruby\include\mruby\debug.h" />
+    <ClInclude Include="..\mruby\include\mruby\dump.h" />
+    <ClInclude Include="..\mruby\include\mruby\error.h" />
+    <ClInclude Include="..\mruby\include\mruby\gc.h" />
+    <ClInclude Include="..\mruby\include\mruby\hash.h" />
+    <ClInclude Include="..\mruby\include\mruby\irep.h" />
+    <ClInclude Include="..\mruby\include\mruby\khash.h" />
+    <ClInclude Include="..\mruby\include\mruby\numeric.h" />
+    <ClInclude Include="..\mruby\include\mruby\object.h" />
+    <ClInclude Include="..\mruby\include\mruby\opcode.h" />
+    <ClInclude Include="..\mruby\include\mruby\proc.h" />
+    <ClInclude Include="..\mruby\include\mruby\range.h" />
+    <ClInclude Include="..\mruby\include\mruby\re.h" />
+    <ClInclude Include="..\mruby\include\mruby\string.h" />
+    <ClInclude Include="..\mruby\include\mruby\value.h" />
+    <ClInclude Include="..\mruby\include\mruby\variable.h" />
+    <ClInclude Include="..\mruby\include\mruby\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bison_wrap.bat" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3582FAE2-3CBE-4CB6-8581-8896CAD7D007}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libmruby_core</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">
+    <IntDir>..\mruby\build\$(Platform)_$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <OutDir>..\mruby\build\$(Platform)_$(Configuration)\lib\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

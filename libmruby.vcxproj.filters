@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\mruby\mrbgems\mruby-array-ext\src\array.c">
+      <Filter>mrbgems\mruby-array-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-fiber\src\fiber.c">
+      <Filter>mrbgems\mruby-fiber</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-hash-ext\src\hash-ext.c">
+      <Filter>mrbgems\mruby-hash-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-kernel-ext\src\kernel.c">
+      <Filter>mrbgems\mruby-kernel-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-math\src\math.c">
+      <Filter>mrbgems\mruby-math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-numeric-ext\src\numeric_ext.c">
+      <Filter>mrbgems\mruby-numeric-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-object-ext\src\object.c">
+      <Filter>mrbgems\mruby-object-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-objectspace\src\mruby_objectspace.c">
+      <Filter>mrbgems\mruby-objectspace</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-print\src\print.c">
+      <Filter>mrbgems\mruby-print</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-proc-ext\src\proc.c">
+      <Filter>mrbgems\mruby-proc-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-random\src\random.c">
+      <Filter>mrbgems\mruby-random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-random\src\mt19937ar.c">
+      <Filter>mrbgems\mruby-random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-sprintf\src\sprintf.c">
+      <Filter>mrbgems\mruby-sprintf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-sprintf\src\kernel.c">
+      <Filter>mrbgems\mruby-sprintf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-string-ext\src\string.c">
+      <Filter>mrbgems\mruby-string-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-struct\src\struct.c">
+      <Filter>mrbgems\mruby-struct</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-symbol-ext\src\symbol.c">
+      <Filter>mrbgems\mruby-symbol-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-time\src\time.c">
+      <Filter>mrbgems\mruby-time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-eval\src\eval.c">
+      <Filter>mrbgems\mruby-eval</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrblib\init_mrblib.c">
+      <Filter>mrblib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-range-ext\src\range.c">
+      <Filter>mrbgems\mruby-range-ext</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\build\src\gems.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="mrblib">
+      <UniqueIdentifier>{add8b32c-c816-40b0-ada1-30c30e875e2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems">
+      <UniqueIdentifier>{9e08a7b3-77d4-44c6-a5b5-338afd50333b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-array-ext">
+      <UniqueIdentifier>{7c0bd99f-76dc-41dc-9560-9687c9e5d6b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-enumerator">
+      <UniqueIdentifier>{c3c3c62a-8afa-4547-b8ac-0a00f2e6999f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-enum-ext">
+      <UniqueIdentifier>{4721269b-551c-4f5b-b46f-1559ed8db367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-enum-lazy">
+      <UniqueIdentifier>{35d4d8db-e307-47ce-b30c-b68bc3ca090a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-eval">
+      <UniqueIdentifier>{effbffab-48a5-492c-b3dd-08b22c274803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-sprintf">
+      <UniqueIdentifier>{23a906d9-1e16-4836-ba61-c0f1adc2ae24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-string-ext">
+      <UniqueIdentifier>{00f5b104-dc5d-42cf-a2fc-c0632d22ee94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-struct">
+      <UniqueIdentifier>{96777562-103a-4e70-9e04-daac3d898a87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-symbol-ext">
+      <UniqueIdentifier>{6cca49b6-b53c-437e-9f3f-14214d342073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-toplevel-ext">
+      <UniqueIdentifier>{d7021168-301c-4ad5-922a-8e185d609ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-time">
+      <UniqueIdentifier>{a8823b40-6d9f-42d7-8850-172e7df8f9a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-fiber">
+      <UniqueIdentifier>{1a0afe6c-35d5-44cc-bc07-70e35070e67a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-hash-ext">
+      <UniqueIdentifier>{4c453281-87d2-4b24-ba0f-36c4eff481b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-kernel-ext">
+      <UniqueIdentifier>{ba564821-9350-4701-899e-7b8abdb9fd12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-math">
+      <UniqueIdentifier>{b6a052c6-e8a8-4185-b0c6-663c08498ebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-numeric-ext">
+      <UniqueIdentifier>{be889c53-1eb3-4073-b9bc-157be359733b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-object-ext">
+      <UniqueIdentifier>{e6e8740d-9bd7-4fae-a743-e3dc11e11877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-objectspace">
+      <UniqueIdentifier>{259bebcf-1f08-470e-b13f-3bc9c6480c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-proc-ext">
+      <UniqueIdentifier>{a0fb6a6a-29d2-47ed-b5f3-fbee9c906f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-random">
+      <UniqueIdentifier>{d834830d-1437-4965-8a6d-8cc54306a520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-range-ext">
+      <UniqueIdentifier>{715061e1-b468-41d2-8e7c-94debd88b698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-print">
+      <UniqueIdentifier>{fa7d931e-b7de-48bb-9338-66250cf95c65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\mruby\mrbgems\mruby-random\src\random.h">
+      <Filter>mrbgems\mruby-random</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\mrbgems\mruby-random\src\mt19937ar.h">
+      <Filter>mrbgems\mruby-random</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\mruby\mrbgems\mruby-array-ext\mrblib\array.rb">
+      <Filter>mrbgems\mruby-array-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\hash.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\kernel.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\numeric.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\range.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\string.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\error.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\array.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\class.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\compar.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="..\mruby\mrblib\enum.rb">
+      <Filter>mrblib</Filter>
+    </None>
+    <None Include="make_gem_init.vbs" />
+    <None Include="..\mruby\mrbgems\mruby-enum-ext\mrblib\enum.rb">
+      <Filter>mrbgems\mruby-enum-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-enumerator\mrblib\enumerator.rb">
+      <Filter>mrbgems\mruby-enumerator</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-hash-ext\mrblib\hash.rb">
+      <Filter>mrbgems\mruby-hash-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-string-ext\mrblib\string.rb">
+      <Filter>mrbgems\mruby-string-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-toplevel-ext\mrblib\toplevel.rb">
+      <Filter>mrbgems\mruby-toplevel-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-time\mrblib\time.rb">
+      <Filter>mrbgems\mruby-time</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-symbol-ext\mrblib\symbol.rb">
+      <Filter>mrbgems\mruby-symbol-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-sprintf\mrblib\string.rb">
+      <Filter>mrbgems\mruby-sprintf</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-struct\mrblib\struct.rb">
+      <Filter>mrbgems\mruby-struct</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-proc-ext\mrblib\proc.rb">
+      <Filter>mrbgems\mruby-proc-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-object-ext\mrblib\object.rb">
+      <Filter>mrbgems\mruby-object-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-enum-lazy\mrblib\lazy.rb">
+      <Filter>mrbgems\mruby-enum-lazy</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-numeric-ext\mrblib\numeric_ext.rb">
+      <Filter>mrbgems\mruby-numeric-ext</Filter>
+    </None>
+    <None Include="..\mruby\mrbgems\mruby-print\mrblib\print.rb">
+      <Filter>mrbgems\mruby-print</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="gem_list.txt" />
+  </ItemGroup>
+</Project>

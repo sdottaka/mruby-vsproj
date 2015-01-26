@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\mruby\src\array.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\backtrace.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\class.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\codegen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\compar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\crc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\debug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\dump.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\enum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\etc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\gc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\kernel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\load.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\numeric.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\object.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\pool.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\print.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\proc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\range.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\state.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\symbol.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\variable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\version.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\vm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\build\src\y.tab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{555fef03-2393-440e-8d9f-f084e91dbeff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mruby">
+      <UniqueIdentifier>{f5410a95-5cdf-4b6c-990b-e27d77b5efd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8bbff434-558c-4cfc-875e-ca7326a4e091}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\mruby\include\mrbconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\array.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\boxing_nan.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\boxing_no.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\boxing_word.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\class.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\compile.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\data.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\debug.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\dump.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\error.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\gc.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\hash.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\irep.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\khash.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\numeric.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\object.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\opcode.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\proc.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\range.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\re.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\string.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\value.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\variable.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\include\mruby\version.h">
+      <Filter>Header Files\mruby</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\mruby\src\parse.y">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bison_wrap.bat" />
+  </ItemGroup>
+</Project>
