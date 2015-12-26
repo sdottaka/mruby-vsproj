@@ -1,3 +1,4 @@
+mrbgems\mruby-compiler
 mrbgems\mruby-sprintf
 mrbgems\mruby-print
 mrbgems\mruby-math
@@ -20,3 +21,5 @@ mrbgems\mruby-enum-lazy
 mrbgems\mruby-toplevel-ext
 mrbgems\mruby-kernel-ext
 mrbgems\mruby-eval
+mrbgems\mruby-error
+mrbgems\mruby-exit

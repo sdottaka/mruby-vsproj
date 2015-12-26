@@ -10,9 +10,6 @@
     <ClCompile Include="..\mruby\src\class.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\mruby\src\codegen.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\mruby\src\compar.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -85,7 +82,10 @@
     <ClCompile Include="..\mruby\src\vm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\mruby\build\src\y.tab.c">
+    <ClCompile Include="..\mruby\src\codedump.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\src\fmt_fp.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -179,13 +179,14 @@
     <ClInclude Include="..\mruby\include\mruby\version.h">
       <Filter>Header Files\mruby</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\mruby\src\parse.y">
+    <ClInclude Include="..\mruby\src\error.h">
       <Filter>Source Files</Filter>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bison_wrap.bat" />
+    </ClInclude>
+    <ClInclude Include="..\mruby\src\opcode.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\src\value_array.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

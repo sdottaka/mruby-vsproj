@@ -263,9 +263,12 @@ For Each dir In gemdirs
   check_gemdir MRUBY_ROOT & "\" & dir
 Next
 
-Dim gem_init_c_path
+Dim gem_init_c_path, gems_c_path
 gem_init_c_path = MRUBY_ROOT & "\build\" & CONFNAME & "\mrbgems\gem_init.c"
+gems_c_path = MRUBY_ROOT & "\build\src\gems.c"
 If should_update(gem_init_c_path, Array(GEM_LIST_FILE)) Then
   make_gem_init_c_root gem_init_c_path, gemdirs
-  make_gems_c MRUBY_ROOT & "\build\src\gems.c", gemdirs
+End If
+If should_update(gems_c_path, Array(GEM_LIST_FILE)) Then
+  make_gems_c gems_c_path, gemdirs
 End If

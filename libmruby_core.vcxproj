@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug_MT|Win32">
       <Configuration>Debug_MT</Configuration>
@@ -35,11 +35,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\mruby\build\src\y.tab.c" />
     <ClCompile Include="..\mruby\src\array.c" />
     <ClCompile Include="..\mruby\src\backtrace.c" />
     <ClCompile Include="..\mruby\src\class.c" />
-    <ClCompile Include="..\mruby\src\codegen.c" />
+    <ClCompile Include="..\mruby\src\codedump.c" />
     <ClCompile Include="..\mruby\src\compar.c" />
     <ClCompile Include="..\mruby\src\crc.c" />
     <ClCompile Include="..\mruby\src\debug.c" />
@@ -47,6 +46,7 @@
     <ClCompile Include="..\mruby\src\enum.c" />
     <ClCompile Include="..\mruby\src\error.c" />
     <ClCompile Include="..\mruby\src\etc.c" />
+    <ClCompile Include="..\mruby\src\fmt_fp.c" />
     <ClCompile Include="..\mruby\src\gc.c" />
     <ClCompile Include="..\mruby\src\hash.c" />
     <ClCompile Include="..\mruby\src\init.c" />
@@ -64,35 +64,6 @@
     <ClCompile Include="..\mruby\src\variable.c" />
     <ClCompile Include="..\mruby\src\version.c" />
     <ClCompile Include="..\mruby\src\vm.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\mruby\src\parse.y">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../mruby/build/src/y.tab.c</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">../mruby/build/src/y.tab.c</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../mruby/build/src/y.tab.c</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">../mruby/build/src/y.tab.c</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">mkdir ../mruby/build/src 2&gt; NUL
-call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../mruby/build/src/y.tab.c</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">../mruby/build/src/y.tab.c</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../mruby/build/src/y.tab.c</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">../mruby/build/src/y.tab.c</Outputs>
-    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\mruby\include\mrbconf.h" />
@@ -121,9 +92,9 @@ call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
     <ClInclude Include="..\mruby\include\mruby\value.h" />
     <ClInclude Include="..\mruby\include\mruby\variable.h" />
     <ClInclude Include="..\mruby\include\mruby\version.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bison_wrap.bat" />
+    <ClInclude Include="..\mruby\src\error.h" />
+    <ClInclude Include="..\mruby\src\opcode.h" />
+    <ClInclude Include="..\mruby\src\value_array.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3582FAE2-3CBE-4CB6-8581-8896CAD7D007}</ProjectGuid>
@@ -135,45 +106,53 @@ call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">

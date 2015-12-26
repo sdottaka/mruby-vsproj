@@ -64,7 +64,19 @@
     <ClCompile Include="..\mruby\mrbgems\mruby-range-ext\src\range.c">
       <Filter>mrbgems\mruby-range-ext</Filter>
     </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-compiler\core\codegen.c">
+      <Filter>mrbgems\mruby-compiler</Filter>
+    </ClCompile>
     <ClCompile Include="..\mruby\build\src\gems.c" />
+    <ClCompile Include="..\mruby\mrbgems\mruby-error\src\exception.c">
+      <Filter>mrbgems\mruby-error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\mrbgems\mruby-exit\src\mruby-exit.c">
+      <Filter>mrbgems\mruby-exit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mruby\build\src\y.tab.c">
+      <Filter>mrbgems\mruby-compiler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="mrblib">
@@ -139,6 +151,15 @@
     <Filter Include="mrbgems\mruby-print">
       <UniqueIdentifier>{fa7d931e-b7de-48bb-9338-66250cf95c65}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mrbgems\mruby-compiler">
+      <UniqueIdentifier>{00c9013d-6d8c-4cae-a419-641c73a69dc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-error">
+      <UniqueIdentifier>{1fe5def2-146b-4778-962a-895c8f7c85e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mrbgems\mruby-exit">
+      <UniqueIdentifier>{452a62f2-3508-484e-af59-89ed32ebac7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\mruby\mrbgems\mruby-random\src\random.h">
@@ -146,6 +167,9 @@
     </ClInclude>
     <ClInclude Include="..\mruby\mrbgems\mruby-random\src\mt19937ar.h">
       <Filter>mrbgems\mruby-random</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mruby\mrbgems\mruby-compiler\core\node.h">
+      <Filter>mrbgems\mruby-compiler</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -228,5 +252,8 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="gem_list.txt" />
+    <CustomBuild Include="..\mruby\mrbgems\mruby-compiler\core\parse.y">
+      <Filter>mrbgems\mruby-compiler</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

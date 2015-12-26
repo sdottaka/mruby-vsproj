@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug_MT|Win32">
       <Configuration>Debug_MT</Configuration>
@@ -35,7 +35,49 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\mruby\tools\mrbc\mrbc.c" />
+    <ClCompile Include="..\mruby\build\src\y.tab.c" />
+    <ClCompile Include="..\mruby\mrbgems\mruby-bin-mrbc\tools\mrbc\mrbc.c" />
+    <ClCompile Include="..\mruby\mrbgems\mruby-compiler\core\codegen.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\mruby\mrbgems\mruby-compiler\core\parse.y">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mkdir ../mruby/build/src 2&gt; NUL &amp; call bison_wrap -o ../mruby/build/src/y.tab.c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\mruby\build\src\y.tab.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\mruby\mrbgems\mruby-compiler\core\node.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A13237F5-4A5C-437A-B2EF-28049404BC9C}</ProjectGuid>
@@ -47,45 +89,53 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_MT|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_MT|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -162,7 +212,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -181,7 +231,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -201,7 +251,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -220,7 +270,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -242,7 +292,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -265,7 +315,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -289,7 +339,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -312,7 +362,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../mruby/include;../mruby/src;../mruby/build/$(Platform)_$(Configuration);../mruby/mrbgems/mruby-compiler/core</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
